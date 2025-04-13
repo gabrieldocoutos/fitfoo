@@ -20,6 +20,10 @@ app.post("/api/users", async (request, reply) => {
 	reply.send(user);
 });
 
+app.get("/hellow-world", async (request, reply) => {
+	reply.send({ hello: "world" });
+});
+
 const port = parseInt(process.env.PORT || "3001", 10);
 app.listen({ port }, (err, address) => {
 	if (err) {
